@@ -1,0 +1,13 @@
+                      Octave-throbber
+                            ***
+          Simple throbber-functionality for Octave
+
+              Written by Anders Dubgaard, 2011
+
+       This is public domain software, see COPYING or
+             http://www.unlicense.org/UNLICENSE
+
+
+This throbber works well in long loops, where it's nice to
+see that somethings is being done, but without filling up
+the screen with lines and lines of the current loop counter.

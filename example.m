@@ -1,0 +1,29 @@
+% Throbber example
+% 
+% Beware that printing other stuff in between the throbbed
+% code sections will most likely screw up the cursor position.
+% In that case, use the fprintf + repmat combo, even though
+% that will probably overwrite the throbber: 
+% 
+%  fprintf([repmat(13,1,1) "DEBUG: I'am here: %d\n"], k);
+% 
+% -This is probably not the only bug/undocumented feature :)
+
+more off
+
+init_throbber();
+
+total = 0;
+for n = 1:8
+  clear_throbber();
+  n
+  for k = 1:n^2
+    throbb();
+    sleep(0.04)
+  end
+  total += k;
+end
+
+stop_throbber();
+
+disp("Total loops:"); disp(total);
