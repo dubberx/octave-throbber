@@ -11,19 +11,24 @@
 
 more off
 
+% Initialise throbber variables
 init_throbber();
 
 total = 0;
 for n = 1:8
+  % Before printing throbb'd variables, clear line
   clear_throbber();
   n
   for k = 1:n^2
+    % Call throbb, won't print anything if init_throbber() has been run
     throbb();
+    % Simulate work-loop with sleep
     sleep(0.04)
   end
   total += k;
 end
 
+% End throbbing
 stop_throbber();
 
 disp("Total loops:"); disp(total);
